@@ -10,14 +10,18 @@ def ventana_inicio():
     global ventana_principal
     pestas_color="DarkGrey"
     ventana_principal=Tk()
-    ventana_principal.geometry("300x250")#DIMENSIONES DE LA VENTANA
+    ventana_principal.geometry("800x600")#DIMENSIONES DE LA VENTANA
     ventana_principal.title("Login con tkinter")#TITULO DE LA VENTANA
-    Label(text="Escoja su opción", bg="LightGreen", width="300", height="2", font=("Calibri", 13)).pack()#ETIQUETA CON TEXTO
+    Label(text="Escoja su opción", bg="Coral1", width="300", height="2", font=("Calibri", 13)).pack()#ETIQUETA CON TEXTO
     Label(text="").pack()
     Button(text="Acceder", height="2", width="30", bg=pestas_color, command=login).pack() #BOTÓN "Acceder"
     Label(text="").pack()
     Button(text="Registrarse", height="2", width="30", bg=pestas_color, command=registro).pack() #BOTÓN "Registrarse".
     Label(text="").pack()
+    # Insertarla en una etiqueta.
+    image = tk.PhotoImage(file="imagenes/descarga.png")
+    label = ttk.Label(image=image)
+    label.pack()
     ventana_principal.mainloop()
 
 #CREAMOS VENTANA PARA REGISTRO.
@@ -25,7 +29,7 @@ def registro():
     global ventana_registro
     ventana_registro = Toplevel(ventana_principal)
     ventana_registro.title("Registro")
-    ventana_registro.geometry("300x250")
+    ventana_registro.geometry("winfo_screenheightxwinfo_screenwidth")
  
     global nombre_usuario
     global clave
@@ -51,9 +55,13 @@ def registro():
 
 def login():
     global ventana_login
+
     ventana_login = Toplevel(ventana_principal)
     ventana_login.title("Acceso a la cuenta")
     ventana_login.geometry("300x250")
+    # Cargar imagen del disco.
+    
+    
     Label(ventana_login, text="Introduzca nombre de usuario y contraseña").pack()
     Label(ventana_login, text="").pack()
  
