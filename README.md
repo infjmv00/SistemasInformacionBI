@@ -1,3 +1,3 @@
 # SistemasInformacionBI
 
-Aplicación de la asignatura BI de 41 curso del grado de ingenieria en informatica
+Aplicación de la asignatura BI de 4º curso del grado de ingenieria en informatica
