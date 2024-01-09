@@ -10,7 +10,8 @@ import os
 import openai
 import tkinter as tk
 load_dotenv()
-os.environ['OPENAI_API_KEY']= "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"
+#DESCOMENTAR LA SIGUIENTE LINEA PARA QUE FUNCIONE LA APLICACION"
+#os.environ['OPENAI_API_KEY']= "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"
 #openai.api_key=os.getenv("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")
 
 
